@@ -21,7 +21,7 @@ const Submissions = () => {
   
         // Send the request with proper headers
         const response = await axios.post(
-          `http://localhost:3000/leetcode/submissions/${name}`,
+          `https://leetcode-backend-1-5uw5.onrender.com/leetcode/submissions/${name}`,
           {}, // The body is empty or has necessary data
           {
             headers: {

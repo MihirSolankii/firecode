@@ -80,7 +80,7 @@ const formatArrayInline = (arr, target) => {
         }
         const token = localStorage.getItem("token");
         const problem_name = name;
-        axios.post(`http://localhost:3000/solution/submit/${name}`, {
+        axios.post(`https://leetcode-backend-1-5uw5.onrender.com/solution/submit/${name}`, {
             problem_name: problem_name,
             code: code
         }, {
@@ -145,7 +145,7 @@ const formatArrayInline = (arr, target) => {
 
     const getEditorial = async() => {
         try {
-            const response = await axios.get(`http://localhost:3000/leetcode/${name}/editorial`);
+            const response = await axios.get(`https://leetcode-backend-1-5uw5.onrender.com/leetcode/${name}/editorial`);
             setEditorial(response.data);
         } catch (error) {
             console.error(error);
@@ -157,7 +157,7 @@ const formatArrayInline = (arr, target) => {
             try {
                 const name = localStorage.getItem("name");
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`http://localhost:3000/leetcode/problems/${id}`, {
+                const response = await axios.get(`https://leetcode-backend-1-5uw5.onrender.com/leetcode/problems/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

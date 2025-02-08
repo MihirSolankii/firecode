@@ -24,7 +24,7 @@ const Signup = () => {
     const isAdmin = email === 'mihiradminleet123@gmail.com';
 
     try {
-      const response = await axios.post('http://localhost:3000/user/register', { 
+      const response = await axios.post('https://leetcode-backend-1-5uw5.onrender.com/user/register', { 
         name, 
         email, 
         password, 
