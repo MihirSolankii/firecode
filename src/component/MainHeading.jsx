@@ -27,7 +27,7 @@ console.log(data);
   const fetchUserData = async () => {
     try {
       const userId = localStorage.getItem('userId');
-      const response = await axios.get(`https://leetcode-backend-1-5uw5.onrender.com/user/${userId}`);
+      const response = await axios.get(`https://leetcode-backend-yizw.onrender.com/user/${userId}`);
       setUserData(response.data);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -37,7 +37,7 @@ console.log(data);
   const fetchProblems = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('https://leetcode-backend-1-5uw5.onrender.com/leetcode/problems', {
+      const response = await axios.get('https://leetcode-backend-yizw.onrender.com/leetcode/problems', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -61,7 +61,7 @@ console.log(data);
   const handleInviteClick = () => {
     console.log('Invite button clicked');
     const token = localStorage.getItem('token');
-    axios.post('https://leetcode-backend-1-5uw5.onrender.com/create-room', {}, {
+    axios.post('https://leetcode-backend-yizw.onrender.com/create-room', {}, {
       headers: {Authorization: `Bearer ${token}` },
     })
     .then((response) => {

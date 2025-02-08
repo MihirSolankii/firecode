@@ -72,7 +72,7 @@ const RoomSelection = () => {
 
   const handleCreateRoom = async () => {
     try {
-      const response = await axios.post('https://leetcode-backend-1-5uw5.onrender.com/create-room', {}, {
+      const response = await axios.post('https://leetcode-backend-yizw.onrender.com/create-room', {}, {
         headers: { Authorization: `Bearer ${tokens}` },
       });
       setRoomId(response.data.roomId);
@@ -94,7 +94,7 @@ const RoomSelection = () => {
   };
 
   const connectWebSocket = () => {
-    const wsUrl = `ws://leetcode-backend-1-5uw5.onrender.com/?roomid=${roomId}&token=${tokens}`;
+    const wsUrl = `ws://leetcode-backend-yizw.onrender.com/?roomid=${roomId}&token=${tokens}`;
     wsRef.current = new WebSocket(wsUrl);
 
     wsRef.current.onopen = () => {
